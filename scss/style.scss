@@ -1,3 +1,10 @@
+// paramètres de style généraux
+body{
+  width: 100%;
+}
+div{
+  padding: 0!important;
+}
 nav{
   display: flex;
   padding: 0 15px;
@@ -6,13 +13,14 @@ nav{
   background-color: #000000;
   height: 60px;
 }
+
 header{
   background-image: url("/var/www/html/test-technique-SAMBOU-DIALLO/images/header@3x.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
+  // height: 576px;
   width: 100%;
-  height: 576px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +35,7 @@ header{
     font-weight: bold;
   }
 }
+
 li{
   list-style: none;
   font-family: 'Aleo';
@@ -34,16 +43,19 @@ li{
   margin: 0 10px;
   color: white;
 }
+
 li:hover{
   text-shadow: 0 0 5px #FFF;
   transition: 0.3s;
   cursor: pointer;
 }
+
 span{
   color: white;
   font-family: 'Roboto';
   font-size: 15px;
 }
+
 span:hover{
   text-shadow: 0 0 5px #FFF;
   transition: 0.3s;
@@ -89,7 +101,34 @@ span:hover{
   cursor: pointer;
 }
 
-// medias query navbar menu
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+  h3{
+    padding: 0 !important;
+  }
+  article{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+  }
+  section{
+    display: flex;
+    flex-wrap: wrap;
+    .boutons{
+      cursor: pointer;
+    }
+  }
+}
+
+// medias queries navbar menu
 @media screen and (min-width: 769px) {
   #menuBouton{
     display: none;
@@ -107,9 +146,11 @@ span:hover{
     display: none;
   }
 }
- //  medias query header
+ //  medias queries header et main
  @media screen and (min-width:320px) and (max-width:767px) {
    header{
+     width: 100%;
+     height: 150px;
      h1{
        display: flex;
        align-self: flex-start;
@@ -119,10 +160,53 @@ span:hover{
        height: 50px;
      }
    }
+   main{
+     h2{
+       color: #000;
+       margin-bottom: 0;
+       font-size: 38px;
+       font-family: 'Aleo';
+       font-weight: bold;
+       display: flex;
+       align-self: flex-start;
+     }
+    img{
+      width: 290px;
+      height: 237px;
+    }
+    h3{
+      color: #000;
+      margin: 10px 0;
+      font-size: 18px;
+      font-family: 'Aleo';
+      font-weight: bold;
+    }
+    p{
+      font-family: 'Roboto';
+      font-size: 13px;
+    }
+    .boutons{
+      width: 18px;
+      height: 18px;
+    }
+    .likes_com{
+      display: flex;
+      p{
+        font-family: 'Roboto';
+        color: rgba(0, 0, 0, 0.4);
+        font-weight: bold;
+        margin-left: 10px;
+      }
+    }
+    article{
+      margin-top: 40px;
+    }
+   }
  }
 
- @media screen and (min-width:768px) and (max-width:979px){
+ @media screen and (min-width:768px) and (max-width:980px){
    header{
+     height: 340px;
      h1{
        display: flex;
        align-self: flex-start;
@@ -131,16 +215,99 @@ span:hover{
        height: 200px;
      }
    }
- }
-
- @media screen and (min-width: 980px) {
-   header{
-     h1{
+   main{
+     h2{
+       color: #000;
+       margin-bottom: 0;
+       font-size: 38px;
+       font-family: 'Aleo';
+       font-weight: bold;
        display: flex;
        align-self: flex-start;
-       margin-top: 140px;
-       width: 570px;
-       height: 144px;
      }
+    img{
+      width: 340px;
+      height: 300px;
+    }
+    h3{
+      color: #000;
+      margin: 10px 0;
+      font-size: 18px;
+      font-family: 'Aleo';
+      font-weight: bold;
+    }
+    p{
+      font-family: 'Roboto';
+      font-size: 13px;
+    }
+    .boutons{
+      width: 18px;
+      height: 18px;
+    }
+    .likes_com{
+      display: flex;
+      p{
+        font-family: 'Roboto';
+        color: rgba(0, 0, 0, 0.4);
+        font-weight: bold;
+        margin-left: 10px;
+      }
+    }
+    article{
+      margin-top: 40px;
+    }
+   }
+ }
+
+ @media screen and (min-width: 981px) and (max-width:1280px){
+   header{
+     height: 576px;
+     h1{
+       display: flex;
+       width: 710px;
+       height: 200px;
+     }
+   }
+   main{
+     h2{
+       color: #000;
+       margin: 0;
+       font-size: 38px;
+       font-family: 'Aleo';
+       font-weight: bold;
+       display: flex;
+       align-self: flex-start;
+     }
+    img{
+      width: 390px;
+      height: 345px;
+    }
+    h3{
+      color: #000;
+      margin: 10px 0;
+      font-size: 18px;
+      font-family: 'Aleo';
+      font-weight: bold;
+    }
+    p{
+      font-family: 'Roboto';
+      font-size: 13px;
+    }
+    .boutons{
+      width: 18px;
+      height: 18px;
+    }
+    .likes_com{
+      display: flex;
+      p{
+        font-family: 'Roboto';
+        color: rgba(0, 0, 0, 0.4);
+        font-weight: bold;
+        margin-left: 10px;
+      }
+    }
+    article{
+      margin-top: 40px;
+    }
    }
  }
