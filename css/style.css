@@ -235,7 +235,7 @@ footer {
   footer span {
     font-size: 15px;
     margin: 10px 0; } }
-@media screen and (min-width: 981px) and (max-width: 1280px) {
+@media screen and (min-width: 981px) {
   header {
     height: 576px; }
     header h1 {
